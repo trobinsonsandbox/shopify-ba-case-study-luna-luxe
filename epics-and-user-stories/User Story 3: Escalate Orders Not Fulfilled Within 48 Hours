@@ -1,0 +1,10 @@
+**Title:** Escalate Subscription Orders Delayed More Than 48 Hours
+
+**As a** customer support lead,  
+**I want** to be alerted when a subscription order isn’t fulfilled within 48 hours,  
+**So that** I can follow up with the customer and resolve the issue proactively.
+
+**Acceptance Criteria:**
+- [ ] Unfulfilled subscription orders are checked 48 hours post-creation
+- [ ] If status is still unfulfilled, a Slack or email alert is sent to support@lunaluxenaturals.com
+- [ ] Alert includes customer name, order #, and number of hours overdue
