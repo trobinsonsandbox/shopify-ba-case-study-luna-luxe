@@ -1,0 +1,18 @@
+# Sample escalation log data for testing in Power BI
+escalation_data = {
+    "OrderID": [1002, 1004],
+    "AlertTimestamp": ["2025-06-09 15:00", "2025-06-10 09:30"],
+    "ResolutionTimestamp": ["2025-06-09 18:00", ""],
+    "EscalationReason": ["Unfulfilled after 48 hrs", "Unfulfilled after 48 hrs"],
+    "ResolvedBy": ["Support Team", ""]
+}
+
+# Convert to DataFrame
+df_escalation = pd.DataFrame(escalation_data)
+
+# Save as CSV
+escalation_output_path = Path("/mnt/data/escalation_logs.csv")
+df_escalation.to_csv(escalation_output_path, index=False)
+
+# Return file name for download
+escalation_output_path.name
