@@ -1,0 +1,10 @@
+**Title:** Send Email with Tier-Specific Fulfillment Guidelines
+
+**As a** warehouse supervisor,  
+**I want** to receive a templated email with product-specific fulfillment instructions based on the subscription tier,  
+**So that** I can ensure packing consistency and minimize mistakes.
+
+**Acceptance Criteria:**
+- [ ] Fulfillment email is triggered only for orders with a subscription tag
+- [ ] Email includes packing notes (e.g., cold pack for Deluxe tier serum)
+- [ ] Email is sent to warehouse@lunaluxenaturals.com with order # and due date
