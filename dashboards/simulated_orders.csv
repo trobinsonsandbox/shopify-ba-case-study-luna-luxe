@@ -1,0 +1,28 @@
+import pandas as pd
+from pathlib import Path
+
+# Sample simulated order data for testing in Power BI
+data = {
+    "OrderID": [1001, 1002, 1003, 1004, 1005],
+    "CustomerName": ["Alex Kim", "Brianna Scott", "Carlos Mendez", "Dina Patel", "Evan Wright"],
+    "CreatedDate": [
+        "2025-06-06 10:15", "2025-06-07 14:22", "2025-06-08 08:45",
+        "2025-06-08 20:30", "2025-06-09 12:10"
+    ],
+    "FulfilledDate": [
+        "2025-06-06 20:10", "", "2025-06-10 10:00", "", "2025-06-10 13:00"
+    ],
+    "FulfillmentStatus": ["Fulfilled", "Unfulfilled", "Fulfilled", "Unfulfilled", "Fulfilled"],
+    "Tags": ["Tier: Mini", "Tier: Essentials", "Tier: Deluxe", "Tier: Mini", "Tier: Essentials"],
+    "OrderType": ["Subscription"] * 5
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Save as CSV
+output_path = Path("/mnt/data/simulated_orders.csv")
+df.to_csv(output_path, index=False)
+
+# Return file name for download
+output_path.name
