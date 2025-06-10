@@ -1,0 +1,69 @@
+from pathlib import Path
+
+# Define a description of the dashboard data model for Power BI
+dashboard_model = """Power BI Data Model Blueprint – Luna Luxe Subscription Fulfillment & Escalation Dashboard
+
+Purpose:
+Translate the dashboard mockup into a real, functional Power BI data model for operational monitoring and escalation tracking.
+
+---
+
+📁 Data Tables & Sources:
+
+1. Orders (from Shopify API or CSV export)
+   - OrderID
+   - CustomerName
+   - CreatedDate
+   - FulfilledDate
+   - FulfillmentStatus
+   - Tags (e.g., Tier: Mini)
+   - OrderType (e.g., Subscription)
+
+2. Escalation Logs (from Zapier/Google Sheets)
+   - OrderID
+   - AlertTimestamp
+   - ResolutionTimestamp
+   - EscalationReason
+   - ResolvedBy
+
+3. SLA Settings (manually entered or config table)
+   - SLAType
+   - TimeLimitHours
+
+---
+
+🧠 Measures (DAX Calculations):
+
+- TotalSubscriptionOrders = COUNTROWS(FILTER(Orders, Orders[OrderType] = "Subscription"))
+- FulfilledWithin48hrs = COUNTROWS(FILTER(Orders, Orders[OrderType] = "Subscription" && DATEDIFF(Orders[CreatedDate], Orders[FulfilledDate], HOUR) <= 48))
+- EscalatedOrders = COUNTROWS(EscalationLogs)
+- AvgFulfillmentTime = AVERAGEX(FILTER(Orders, Orders[FulfilledDate] <> BLANK()), DATEDIFF(Orders[CreatedDate], Orders[FulfilledDate], HOUR))
+- AvgResponseTime = AVERAGEX(EscalationLogs, DATEDIFF(EscalationLogs[AlertTimestamp], EscalationLogs[ResolutionTimestamp], HOUR))
+- AtRiskOrders = COUNTROWS(FILTER(Orders, Orders[OrderType] = "Subscription" && Orders[FulfillmentStatus] = "Unfulfilled" && DATEDIFF(Orders[CreatedDate], NOW(), HOUR) > 72))
+
+---
+
+📊 Recommended Visuals:
+
+- KPI Tiles: Total Orders, Fulfilled <48Hrs, Escalated, At-Risk
+- Line Chart: Escalation Trend (Last 30 Days)
+- Table: Last 5 Escalated Orders
+- Card: Avg Fulfillment Time, Avg Response Time
+- Slicer: Subscription Tier
+
+---
+
+📎 Notes:
+
+- Import Orders data from Shopify using API or CSV (manual for demo)
+- EscalationLogs can be maintained in Google Sheets + connected to Power BI
+- Use DAX time intelligence functions for trend charts and SLA calculations
+- Create a “Resolved” status flag where ResolutionTimestamp is not blank
+"""
+
+# Save to a downloadable txt file
+output_path = Path("/mnt/data/PowerBI_LunaLuxe_Escalation_Dashboard_Model.txt")
+output_path.write_text(dashboard_model)
+
+# Return file name for download
+output_path.name
