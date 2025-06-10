@@ -1,0 +1,10 @@
+**Title:** Auto-Tag Orders Based on Subscription Tier
+
+**As a** fulfillment team member,  
+**I want** subscription orders to be automatically tagged by tier (Mini, Essentials, Deluxe),  
+**So that** I can identify packaging requirements and prioritize shipping accordingly.
+
+**Acceptance Criteria:**
+- [ ] Orders are automatically tagged with the corresponding subscription tier upon creation
+- [ ] Tags are visible in the order details for warehouse staff
+- [ ] Tag logic is driven by product metafields or tags
