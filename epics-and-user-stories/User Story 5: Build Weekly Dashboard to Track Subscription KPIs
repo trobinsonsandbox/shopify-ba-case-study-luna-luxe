@@ -1,0 +1,11 @@
+**Title:** Subscription Performance Dashboard
+
+**As a** store owner,  
+**I want** to see weekly KPIs for subscription performance,  
+**So that** I can understand fulfillment delays, churn rate, and top-selling tiers.
+
+**Acceptance Criteria:**
+- [ ] Dashboard includes active subscribers by tier
+- [ ] Displays average fulfillment time (order to shipped)
+- [ ] Shows churn rate (cancellations / active subscriptions)
+- [ ] Highlights delayed shipments and triggered alerts
