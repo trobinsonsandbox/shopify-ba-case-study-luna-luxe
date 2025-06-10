@@ -77,6 +77,9 @@ For each line item in Order:
     Else if Product Tag = "subscription-deluxe":
         Add Order Tag = "Tier: Deluxe"
 ```
+
+🔗 Related Diagram: [Swimlane – Order Fulfillment Tagging](../workflow-diagrams/Swimlane-Order-Fulfillment-Tagging.md)
+
 ## Assumptions
 
 1. All subscription products are tagged consistently in Shopify
@@ -108,3 +111,5 @@ For each line item in Order:
 4. Only one tier tag is applied per order
 
 5. Logic is documented and testable in sandbox prior to deployment
+
+
