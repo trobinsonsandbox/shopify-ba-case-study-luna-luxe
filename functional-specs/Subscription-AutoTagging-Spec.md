@@ -97,7 +97,7 @@ For each line item in Order:
 
 4. Manual QA may be needed to validate flow after initial deployment
 
-#Acceptance Criteria
+##Acceptance Criteria
 
 1. Orders with tagged subscription products receive the correct tier-based order tag automatically
 
