@@ -1,0 +1,10 @@
+**Title:** Trigger Onboarding Emails by Subscription Tier
+
+**As a** marketing manager,  
+**I want** new subscription customers to receive onboarding emails tailored to their chosen tier,  
+**So that** they get a more personalized experience and reduce refund rates.
+
+**Acceptance Criteria:**
+- [ ] First-time subscription orders trigger Klaviyo flow based on tier
+- [ ] Mini-tier receives 1 welcome email
+- [ ] Essentials and Deluxe receive multi-step onboarding flow with product use tips and upsell opportunities
