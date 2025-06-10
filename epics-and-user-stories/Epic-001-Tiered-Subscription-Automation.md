@@ -1,0 +1,2 @@
+Epic Description:
+Luna Luxe Naturals offers three monthly skincare subscription tiers (Mini, Essentials, Deluxe). Each tier includes different products, shipping timelines, and customer experience expectations. The business needs to automate fulfillment instructions, trigger tier-specific email flows, track fulfillment KPIs, and escalate delays to the support team — all while reducing owner involvement.
