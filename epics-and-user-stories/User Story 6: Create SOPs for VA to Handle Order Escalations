@@ -1,0 +1,10 @@
+**Title:** Standard Operating Procedure for VA: Subscription Escalations
+
+**As a** business analyst,  
+**I want** to create a step-by-step procedure for handling delayed subscription orders,  
+**So that** a virtual assistant can resolve issues without store owner involvement.
+
+**Acceptance Criteria:**
+- [ ] SOP includes instructions for checking fulfillment status
+- [ ] Email/Slack templates for contacting fulfillment and customers
+- [ ] Escalation rules documented (e.g., refund after 72 hours if unshipped)
